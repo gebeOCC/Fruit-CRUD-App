@@ -1,27 +1,108 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Roboto', sans-serif;
+  background-color: #282c35;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+  background-color: #1e2128;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.create {
+    text-align: center;
+    background-color: #1e2128;
+    border-radius: 10px;
+    padding: 10px;
+    height: 260px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 5px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+}
+
+button {
+  padding: 12px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin: 8px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button.button-update {
+  background-color: #2ecc71;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form button {
+  margin: none;
+}
+
+label {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+input {
+  padding: 12px;
+  margin: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  border-radius: 8px;
+  color: #333;
+  background-color: #444;
+}
+
+input[type="text"], input[type="color"] {
+  color: #fff;
+}
+
+input[type="text"]:focus, input[type="color"]:focus {
+  outline: none;
+  background-color: #555;
+  border: 1px solid #3498db;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.tButton {
+  padding: 3px 7px;
 }
